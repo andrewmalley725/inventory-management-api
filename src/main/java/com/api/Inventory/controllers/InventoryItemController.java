@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
@@ -18,7 +19,7 @@ public class InventoryItemController {
     }
 
     @GetMapping("/inventory-items")
-    public List<InventoryItem> Base() {
+    public List<Map<String, Object>> Base() {
         return _db.getAll();
     }
 
